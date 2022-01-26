@@ -292,7 +292,7 @@ function pesquisar(frm){
 
 function gravarAlteracao(frm) {
     var table = frm.table.value;
-
+    var caminhourl = "";
 
     if (table === "Administrador") {
         if (validarLogin(frm)) {
@@ -315,8 +315,6 @@ function gravarAlteracao(frm) {
         if(validarLogin(frm)){
             if(frm.acao.value === "alterar")
                 caminhourl = "/sgab/main?acao=AtendenteAlterar";
-            else if(frm.acao.value === "gravarAlteracao")
-                caminhourl = "/sgab/main?acao=AtendenteGravarAlteracao";
             else if(frm.acao.value === "gravar")
                 caminhourl = "/sgab/main?acao=AtendenteGravarInsercao";
         }
@@ -341,8 +339,6 @@ function gravarAlteracao(frm) {
         if(validarLogin(frm)){
             if(frm.acao.value === "alterar")
                 caminhourl = "/sgab/main?acao=BibliotecarioAlterar";
-            else if(frm.acao.value === "gravarAlteracao")
-                caminhourl = "/sgab/main?acao=BibliotecarioGravarAlteracao";
             else if(frm.acao.value === "gravar")
                 caminhourl = "/sgab/main?acao=BibliotecarioGravarInsercao";
         }
